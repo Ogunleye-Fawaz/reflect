@@ -2,11 +2,14 @@ setInterval(showTime, 1000); // assign interval to the function which allows it 
 
 function showTime(){
     const currentTime = new Date(); // create a date object
+    let year = currentTime.getFullYear();
+    let month = currentTime.getMonth();
+    let day = currentTime.getDate(); 
     let hours =    currentTime.getHours(); //get hours
     let minutes =  currentTime.getMinutes() ; //get minutes
     let seconds =  currentTime.getSeconds(); // get seconds
     let ap = "AM" ; //set AM by default
-
+    
         if(hours >= 12) { //if hours is greater or equal to 12 ap is pm
             ap = "PM";
         }
@@ -20,6 +23,11 @@ function showTime(){
             seconds = '0' + currentTime.getSeconds();
         }
 
+ month += 1;
 var show = document.getElementById('clock'); // synced my html element id to my js variable
-show.innerHTML = hours + ':' + minutes + ':' + seconds + ap; //used the innerHTML property to display my result
+var date = document.getElementById('date');
+
+date.innerHTML = year +  '-' +  month + '-' + day;
+show.innerHTML =  hours + ':' + minutes + ':' + seconds + ap; //used the innerHTML property to display my result
+
 }

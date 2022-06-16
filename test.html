@@ -1,0 +1,76 @@
+<body>
+    <!--<div>
+        <button id="ee">ffff</button>
+        <script>
+            function alerts() {
+                alert('Fazzy on this one');
+            }
+            var btn = document.getElementById('ee');
+            btn.addEventListener("click", alerts);
+        </script>
+        </div>-->
+    
+
+
+    </div>
+    <div class="">
+    <div id="row-1">
+        <input type="text" id="userInput">
+        <button id="enter" onclick="show()">Enter</button>
+    </div>
+    <div id="row-2">
+        <ul id="uli">
+
+        </ul>
+    </div>
+</div>
+
+    <script>
+var input = document.getElementById("userInput");
+var enter = document.getElementById('enter');
+var ul = document.getElementById('uli');
+function inputValue() {
+    return input.value.length;
+}
+function show() {
+    var li = document.createElement('li');
+    li.appendChild(document.createTextNode(input.value));
+    ul.appendChild(li);
+    input.value = '';
+function crossOut() {
+    li.classList.toggle('done');
+}
+var dBtn = document.createElement("button");
+dBtn.appendChild(document.createTextNode('X'));
+li.appendChild(dBtn);
+dBtn.addEventListener("click", deleteListItem);
+
+function deleteListItem() {
+    li.classList.add("delete");
+}
+}
+function addListAfterClick() {
+    if(inputValue() > 0) {
+        createListElement();
+    }
+}
+function addListAfterKeypress(event) {
+    if(inputValue() > 0 & event.which === 13) {
+        createListElement();
+    }
+    else{
+        return "please input something a task";
+    }
+}
+enter.addEventListener("click", addListAfterClick);
+input.addEventListener("keypress", addListAfterKeypress);
+
+    </script>   
+        <style>
+            .delete{
+                display:none;
+            }
+        </style>
+        
+    </div>
+</body>

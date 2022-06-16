@@ -1,41 +1,87 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body onload="setTimeout(myFunction, 3000)">
             <div class="container">
                 
-                <div class="time">
-                    
-                   
-                    <div id="clock"></div>
-                        <div id="tips">
-                        <h3 id="a">What am I grateful for today?</h3>
-                        <h3 id="b">What three main tasks do I need to accomplish today?</h3>
-                        <h3 id="c">What is my main intention today?</h3>
-                        <h3 id="d"></h3>
-                        <h3 id="e"></h3>
-                        <h3 id="f" ></h3>
-                        </div>
-                    </div>
+                <div class="time">                    
+                    <div id="date"></div>
+                    <br/>
+                    <div id="clock"></div>                                    
+                </div>             
+            </div>
                   
+                
+            <div class="todo">
+                <div class="container">                      
+                        <div class="row">
+                            <div class="helpText col-12">                                                               
+                                <p id="first">Plan your Morning and stay productive through the day!</p>                              
+                            </div>
+                        </div>
+                
+                        <div class="row">
+                            <div class="col-12">
+                                <input id="userInput" type="text" placeholder="Let's start planning!..." maxlength="27">
+                                <button id="enter">Enter</button>
+                            </div>
+                        </div>
+                
+                        <div class="row">
+                            <div class="listItems col-12">
+                                <ul class="col-12 offset-0 col-sm-8 offset-sm-2">
+                                </ul>
+                            </div>
+                        </div>
+                
+
+
                 </div>
-                <div class="todo"></div>
+            </div>
 
            
             <div class="motivation">
+                
                 <div id="circle"></div>
                 <div id="title"><h3>Daily dose of motivation</h3></div>
-                <div id="quotes"></div>
-                <div id="author"></div>
+                <div id="tips">
+                    <h3 id="a"></h3>
+                    <h3 id="b"></h3>
+                    <h3 id="c"></h3>
+                    <h3 id="d"></h3>
+                    <h3 id="e"></h3>
+                    <h3 id="f"></h3>
+                    <h3 id="g"></h3>
+                    <h3 id="h"></h3>
+                    <h3 id="i"></h3>
+                    <h3 id="j"></h3>
+                    <h3 id="k"></h3>
+                    <h3 id="l"></h3>
+                    <h3 id="m"></h3>
+                    <h3 id="n"></h3>
+                    <h3 id="o"></h3>
+                    <h3 id="p"></h3>
+                    <h3 id="q"></h3>
+                    <h3 id="r"></h3>
+                    <h3 id="s"></h3>
+                    <h3 id="t"></h3>
+                    <h3 id="u"></h3>
+                   
+                    
+                    
             </div> 
         
         
-        </div>
+       
+        
 
 
     </body>
+    <script src="main.js"></script>
     <script src="clock.js"></script>
     <script src="todoscript.js"></script>
 </html>
